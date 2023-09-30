@@ -1,0 +1,45 @@
+<div class="container mt-3">
+  <form class="row g-3 needs-validation" novalidate [formGroup]="studentForm">
+    <div class="col-md-6">
+      <label for="controlName" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="controlName" formControlName="controlName" />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="controlLastName" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="controlLastName" formControlName="controlLastName" />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="controlSubject" class="form-label">Materia</label>
+      <input type="text" class="form-control" id="controlSubject" formControlName="controlSubject" />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+
+    <div class="col-md-3">
+      <label for="controlNote" class="form-label">Nota final</label>
+      <input type="text" class="form-control" id="controlNote" formControlName="controlNote" />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+    <div class="col-md-3">
+      <label for="controlCondition" class="form-label">Condición</label>
+      <input type="text" class="form-control" id="controlCondition" formControlName="controlCondition" />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+
+    <div class="col-12">
+      <button
+        [disabled]="studentForm.invalid"
+        (click)="onSubmit()"
+        class="btn btn-primary"
+        type="button"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
+
+
